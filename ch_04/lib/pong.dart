@@ -33,6 +33,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
     super.initState();
     posX = 0;
     posY = 0;
+    //use controller to control the duration
     controller = AnimationController(
       duration: const Duration(minutes: 10000),
       vsync: this,
@@ -53,7 +54,7 @@ class _PongState extends State<Pong> with SingleTickerProviderStateMixin {
         checkBorders();
         });
      
-
+    //use forward method to start the animation
     controller.forward();
   }
 
